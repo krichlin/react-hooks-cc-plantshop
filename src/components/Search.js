@@ -8,7 +8,7 @@ function Search({ setPlantSearch }) {
         type="text"
         id="search"
         placeholder="Type a name to search..."
-        onChange={(e) => setPlantSearch(e.target.value)}
+        onChange={(e) => setPlantSearch(e.target.value)}  // destructure value from e for this?
       />
     </div>
   );

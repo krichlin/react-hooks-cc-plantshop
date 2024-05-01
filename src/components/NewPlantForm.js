@@ -1,18 +1,22 @@
 import React, { useState } from "react";
 
-function NewPlantForm({ addNewPlant }) {
-  const [formName, setFormName] = useState("")
+// Use the form in the header to add a new plant.
+
+function NewPlantForm({ addNewPlant }) {   
+
+  const [formName, setFormName] = useState("")       // declare 3 state variables for Name, Image, Price
   const [formImage, setFormImage] = useState("")
   const [formPrice, setFormPrice] = useState("")
 
-  function handleSubmit(event) {
-    event.preventDefault()
+  function handleSubmit(event) {      
+    event.preventDefault()            // do not reload page on submit
     const newPlant = {
       "name": formName,
       "image": formImage,
       "price": formPrice
     }
-    addNewPlant(newPlant)
+    // console.log("newPlant",newplant);
+    addNewPlant(newPlant)       // when form submits, send the newPlant object we just made to addNewPlant
   }
 
   return (
